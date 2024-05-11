@@ -21,18 +21,23 @@
     </div>
     <div>
       <label for="color">Seleccione un color: </label>
-      <input type="color" id="color" </div>
-      <div>
-        <button type="submit">guardar</button>
-      </div>
-      <div>
-        <label for="correo">Ingrese su correo</label>
-        <input type="text" id="correo" required>
-      </div>
-      <div>
-        <label for="telefono">Ingrese su telefono</label>
-        <input type="text" id="telefono" required pattern=[0-9]{0,10}>
-      </div>
+      <input type="color" id="color" autocomplete="off">
+    </div>
+    <div>
+      <label for="correo">Ingrese su correo</label>
+      <input type="text" id="correo" autocomplete="off" required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+    </div>
+    <div>
+      <label for="telefono">Ingrese su telefono</label>
+      <input type="text" id="telefono" required pattern=[0-9]{0,10} autocomplete="off">
+    </div>
+    <div>
+      <label for="Email">Ingrese su Email: </label>
+      <input type="email" id="Email" required autocomplete="off">
+    </div>
+    <div>
+      <button type="submit">guardar</button>
+    </div>
 
 
   </form>
