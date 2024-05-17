@@ -8,24 +8,33 @@
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li>
-        <a href="archivotres.html">UNO</a>
-      </li>
-      <li>
-        <a href="archivocuatro.html">DOS</a>
-      </li>
-      <li>
-        <a href="archivodos.html">TRES</a>
-      </li>
-      <li>
-        <a href="index.html">INICIO</a>
-      </li>
-    </ul>
-  </nav>
+  <img src="img/marriage-2751813_640.jpg" alt="logo" height="90px">
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">INICIO</a>
+        </li>
+        <li>
+          <a href="archivotres.html">UNO</a>
+        </li>
+        <li>
+          <a href="archivocuatro.html">DOS</a>
+        </li>
+        <li>
+          <a href="archivodos.html">TRES</a>
+        </li>
+        <li>
+          <a href="formulario.html">CONTACTO</a>
+        </li>
+        <li>
+          <a href="tabla.html">TABLA</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <form action="controlador" method="get">
+  <form action="controlador" method="post" enctype="multipart/form-data">
     <div>
       <label for="edad">Ingrese su edad: </label>
       <input type="number" step="1" min="0" max="17" value="5" name="edad" disabled>
@@ -41,7 +50,7 @@
     </div>
     <div>
       <label for="correo">Ingrese su correo</label>
-      <input type="text" id="correo" autocomplete="off" required
+      <input type="text" id="correo" name="correo" autocomplete="off" required
         pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
     </div>
     <div>
@@ -54,10 +63,27 @@
     </div>
     <div>
       <label for="ciudad">seleccione su ciudad </label>
-      <select name="ciudad" id="ciudad" disabled></select>
-      <option value="1">Giron</option>
-      <option value="2">Bucaramanga</option>
-      <option value="3">Piedecuesta</option>
+      <select name="ciudad" id="ciudad" disabled>
+        <option value="1" name="Giron">Giron</option>
+        <option value="2" selected name="Bucaramanga">Bucaramanga</option>
+        <option value="3" name="Piedecuesta">Piedecuesta</option>
+      </select>
+    </div>
+    <div>
+      <label for="sexo">Selccione su genero: </label>
+      <input type="radio" name="sexo" value="Masculino" checked> Masculino
+      <input type="radio" name="sexo" value="Femenino"> Femenino
+    </div>
+    <div>
+      <label for="habilidades">
+        <input type="checkbox" name="habilidades" value="HTML">HTML
+        <input type="checkbox" name="habilidades" value="GIT" checked>GIT
+        <input type="checkbox" name="habilidades" value="CLI">CLI
+        <input type="checkbox" name="habilidades" value="JS">JS
+      </label>
+    </div>
+    <div>
+      <input type="file" accept=".jpg,.png" multiple>
     </div>
     <div>
       <button type="submit">guardar</button>
