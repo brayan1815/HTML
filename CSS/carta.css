@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+*{
+    margin-left: 85px;
+    margin-right: 85px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Anek Devanagari";
+    font-size: 17px;
+    background-color:white;
+}
+
+p b{
+    font-weight: bold; 
+    margin: 0;
+}
+
+h1,h2{
+    color: rgb(216, 142, 142);
+}
